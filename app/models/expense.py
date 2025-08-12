@@ -14,3 +14,7 @@ class ExpenseModel(db.Model):
     amount = db.Column(db.Float(precision=2), nullable=False)
     date = db.Column(db.Date, nullable=False)
     comment = db.Column(db.String(100), nullable=False)
+
+    # user = db.relationship("UserModel", back_populates="expenses")
+    expenses_category = db.relationship("ExpenseCategoryAssignedToUserModel", back_populates="expenses")
+    payment_methods = db.relationship("PaymentMethodsAssignedToUserModel", back_populates="expenses")

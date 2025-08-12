@@ -13,3 +13,6 @@ class ExpenseCategoryAssignedToUserModel(db.Model):
     # user_id = db.Column(db.Integer, db.ForeignKey("users.id"), nullable=False)
     name = db.Column(db.String(50), unique=True, nullable=False)
     limit = db.Column(db.Float(), nullable=True)
+
+    # user = db.relationship("UserModel", back_populates="expenses_category")
+    expenses = db.relationship("ExpenseModel", back_populates="expenses_category", lazy="dynamic")

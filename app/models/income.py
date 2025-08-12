@@ -11,3 +11,6 @@ class IncomeModel(db.Model):
     amount = db.Column(db.Float(precision=2), nullable=False)
     date = db.Column(db.Date, nullable=False)
     comment = db.Column(db.String(100), nullable=True)
+
+    # user = db.relationship("UserModel", back_populates="incomes")
+    income_categories = db.relationship("IncomeCategoryAssignedToUsersModel", back_populates="incomes")
