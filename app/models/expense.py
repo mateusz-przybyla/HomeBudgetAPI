@@ -11,6 +11,6 @@ class ExpenseModel(db.Model):
     payment_method_assigned_to_user_id = db.Column(
         db.Integer, db.ForeignKey("payment_methods_assigned_to_users.id"), nullable=False
     )
-    amount = db.Column(db.Numeric(8, 2), nullable=False)
+    amount = db.Column(db.Float(precision=2), nullable=False)
     date = db.Column(db.Date, nullable=False)
     comment = db.Column(db.String(100), nullable=False)
