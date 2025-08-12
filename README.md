@@ -9,6 +9,7 @@ REST API for Personal Budget Management – A lightweight Flask-based API for tr
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Database Schema](#database-schema)
 - [Endpoints](#endpoints)
     - [XXX](#xxx)
     - [YYY](#yyy)
@@ -27,6 +28,12 @@ REST API for Personal Budget Management – A lightweight Flask-based API for tr
 ---
 
 ## Installation
+
+---
+
+## Database Schema
+
+![](/readme/database_schema.jpg)
 
 ---
 
